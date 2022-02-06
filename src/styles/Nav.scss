@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500;700&family=Sora:wght@300;400;500;600&display=swap');
+
+$grey: #2F3437;
+$black: #282C2F;
+
+:root{
+--favourite: #4F74BA;
+}
+
+%flex{
+    display: flex;
+    align-items: center;
+}
+
+
+nav{
+    position: fixed;
+    width: 100vw;
+    background: $black;
+    color: white;
+    box-sizing: border-box;
+    @extend %flex;
+    justify-content: space-between;
+    height: 75px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    z-index: 999;
+    .nav__logo{
+        
+            height: 55px;
+            width:45px;
+            display: flex;
+            justify-content: flex-start;
+        svg{
+            height: 55px;
+            width:45px;
+            @extend %flex;
+            .diamond{
+                path{
+                    fill: var(--favourite);
+                    stroke: var(--favourite)
+                }
+                
+            }
+        }
+    }
+    .nav__ul{
+        list-style-type: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 800px;
+        height: 75px;
+        @extend %flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        li{
+            padding: 0 50px;
+            border-left: 5px solid var(--favourite);
+            border-right: 5px solid var(--favourite);
+            margin-left: -5px;
+            font-size: 1.25em;
+            box-sizing: border-box;
+            flex-direction: row;
+            cursor: pointer;
+            @extend %flex;
+            justify-content: center;
+            height: 55px;
+            transform-origin: center;
+            transition: all .2s ease-in;
+            &:first-child{
+                border-left: none;
+            }
+            &:nth-child(3){
+                border-right: none;
+                
+            }
+            &:hover{
+             height: 75px;   
+             font-size: 1.6em;
+             background-color: $grey;
+            }
+            &.nav__icon{
+                padding: 0 10px;
+                font-size: 1.2em;
+                
+                border: none;
+                &.settings{
+                    &:hover svg{
+                        transform: rotateZ(270deg);
+                    }
+                    svg{
+                        transition: all .9s ease;
+                    }
+                    
+                }
+            }
+            &.margin-left{
+                margin-left: 0px;
+            }
+            
+        }
+    }
+}
