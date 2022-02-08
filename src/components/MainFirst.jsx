@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/mainFirst.scss";
-
+import { StaticImage } from "gatsby-plugin-image";
+import mainLogo from "../images/mainLogo.svg";
 function MainFirst() {
     return (
         <main className="padding">
@@ -21,7 +22,7 @@ function MainFirst() {
                 </div>
                 <div className="Hello__brand">
                     {/* <img src={mainLogo} alt="" /> */}
-
+                    <StaticImage src="../images/mainLogo.svg" maxWidth="800" />
                     <div className="Hello__title">
                         FRONT <span> FLEX</span>
                     </div>

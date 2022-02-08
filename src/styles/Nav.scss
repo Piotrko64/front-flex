@@ -41,6 +41,9 @@ nav {
             }
         }
     }
+    .nav__btn {
+        display: none;
+    }
     .nav__ul {
         list-style-type: none;
         box-sizing: border-box;
@@ -93,6 +96,111 @@ nav {
             }
             &.margin-left {
                 margin-left: 0px;
+            }
+        }
+    }
+}
+// RWD
+@media (max-width: 850px) {
+    nav {
+        width: 100vw;
+
+        @extend %flex;
+        justify-content: space-between;
+        height: 75px;
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        z-index: 999;
+        .nav__logo {
+            height: 55px;
+            width: 45px;
+            display: flex;
+            justify-content: flex-start;
+            svg {
+                height: 55px;
+                width: 45px;
+                @extend %flex;
+                .diamond {
+                    path {
+                        fill: var(--favourite);
+                        stroke: var(--favourite);
+                    }
+                }
+            }
+        }
+        .nav__btn {
+            display: flex;
+            height: 26px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 25px;
+            .nav__btnline {
+                background-color: white;
+                height: 4px;
+                width: 36px;
+                position: relative;
+                z-index: 999;
+                transform: skewX(-45deg);
+            }
+        }
+        .nav__ul {
+            width: 100%;
+            max-width: 800px;
+            height: 100%;
+            @extend %flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 80px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: $grey;
+            max-width: none;
+            li {
+                padding: 20px 20px;
+                border-left: 0px solid var(--favourite);
+                border-right: 0px solid var(--favourite);
+                margin-left: -5px;
+                font-size: 1.25em;
+                transform-origin: center;
+                flex-direction: row;
+                box-sizing: content-box;
+                cursor: pointer;
+                @extend %flex;
+                justify-content: center;
+                height: 55px;
+                transform-origin: center;
+                transition: all 0.15s ease-in;
+                flex-shrink: 300px;
+                &:first-child {
+                    border-left: none;
+                }
+                &:nth-child(3) {
+                    border-right: none;
+                }
+                &:hover {
+                    height: 75px;
+                    font-size: 1.4em;
+                    background-color: $grey;
+                }
+                &.nav__icon {
+                    padding: 0 10px;
+                    font-size: 1.2em;
+
+                    border: none;
+                    &.settings {
+                        &:hover svg {
+                            transform: rotateZ(270deg);
+                        }
+                        svg {
+                            transition: all 0.9s ease;
+                        }
+                    }
+                }
+                &.margin-left {
+                    margin-left: 0px;
+                }
             }
         }
     }

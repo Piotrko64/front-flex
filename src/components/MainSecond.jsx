@@ -54,6 +54,7 @@ function MainSecond() {
                         <div key={node.id}>
                             {node.title} ---- {node.data}{" "}
                             <StructuredText data={node.content.value} />
+                            <img src={node.gallery[0].url} alt="" />
                         </div>
                     );
                 })}

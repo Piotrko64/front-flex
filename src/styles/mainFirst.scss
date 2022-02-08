@@ -70,3 +70,35 @@ main {
         }
     }
 }
+@media (max-width: 1400px) {
+    main {
+        .Hello {
+            padding: 0 30px;
+
+            max-width: 1050px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    main {
+        .Hello {
+            padding: 100px 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            min-height: auto;
+            flex-direction: column;
+            .Hello__left {
+                align-self: flex-start;
+            }
+            .Hello__brand {
+                align-self: flex-end;
+            }
+        }
+    }
+}

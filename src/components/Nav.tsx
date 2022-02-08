@@ -24,6 +24,11 @@ function Nav() {
                     <AiFillSetting />
                 </li>
             </ul>
+            <div className="nav__btn">
+                <div className="nav__btnline"></div>
+                <div className="nav__btnline"></div>
+                <div className="nav__btnline"></div>
+            </div>
         </nav>
     );
 }
