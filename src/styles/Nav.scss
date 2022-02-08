@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500;700&family=Sora:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500;700&family=Sora:wght@300;400;500;600&display=swap");
 
-$grey: #2F3437;
-$black: #282C2F;
+$grey: #2f3437;
+$black: #282c2f;
 
-:root{
---favourite: #4F74BA;
+:root {
+    --favourite: #4f74ba;
 }
 
-%flex{
+%flex {
     display: flex;
     align-items: center;
 }
 
-
-nav{
+nav {
     position: fixed;
     width: 100vw;
     background: $black;
@@ -22,29 +21,27 @@ nav{
     @extend %flex;
     justify-content: space-between;
     height: 75px;
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 300;
     z-index: 999;
-    .nav__logo{
-        
+    .nav__logo {
+        height: 55px;
+        width: 45px;
+        display: flex;
+        justify-content: flex-start;
+        svg {
             height: 55px;
-            width:45px;
-            display: flex;
-            justify-content: flex-start;
-        svg{
-            height: 55px;
-            width:45px;
+            width: 45px;
             @extend %flex;
-            .diamond{
-                path{
+            .diamond {
+                path {
                     fill: var(--favourite);
-                    stroke: var(--favourite)
+                    stroke: var(--favourite);
                 }
-                
             }
         }
     }
-    .nav__ul{
+    .nav__ul {
         list-style-type: none;
         box-sizing: border-box;
         margin: 0;
@@ -55,7 +52,7 @@ nav{
         @extend %flex;
         flex-direction: row;
         justify-content: flex-end;
-        li{
+        li {
             padding: 0 50px;
             border-left: 5px solid var(--favourite);
             border-right: 5px solid var(--favourite);
@@ -68,38 +65,35 @@ nav{
             justify-content: center;
             height: 55px;
             transform-origin: center;
-            transition: all .2s ease-in;
-            &:first-child{
+            transition: all 0.15s ease-in;
+            &:first-child {
                 border-left: none;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
                 border-right: none;
-                
             }
-            &:hover{
-             height: 75px;   
-             font-size: 1.6em;
-             background-color: $grey;
+            &:hover {
+                height: 75px;
+                font-size: 1.4em;
+                background-color: $grey;
             }
-            &.nav__icon{
+            &.nav__icon {
                 padding: 0 10px;
                 font-size: 1.2em;
-                
+
                 border: none;
-                &.settings{
-                    &:hover svg{
+                &.settings {
+                    &:hover svg {
                         transform: rotateZ(270deg);
                     }
-                    svg{
-                        transition: all .9s ease;
+                    svg {
+                        transition: all 0.9s ease;
                     }
-                    
                 }
             }
-            &.margin-left{
+            &.margin-left {
                 margin-left: 0px;
             }
-            
         }
     }
 }
