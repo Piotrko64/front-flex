@@ -5,7 +5,7 @@ function MainSecond() {
     return (
         <section className="About" style={{ backgroundImage: `url(${backCode})` }}>
             <div className="About__photo">
-                <StaticImage src="../images/pjoter.webp"></StaticImage>
+                <StaticImage src="../images/pjoter.webp" alt=""></StaticImage>
             </div>
             <div className="About__describe padding">
                 <h1>O mnie</h1>

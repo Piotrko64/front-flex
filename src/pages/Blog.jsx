@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
 import React from "react";
+import Nav from "../components/Nav";
 
-function MainSecond() {
+function Blog() {
     const data = useStaticQuery(graphql`
         {
             allDatoCmsFlex {
@@ -12,21 +13,6 @@ function MainSecond() {
                         title
                         seotitle
                         gallery {
-                            size
-                            width
-                            height
-                            path
-                            format
-                            isImage
-                            notes
-                            author
-                            copyright
-                            filename
-                            basename
-                            exifInfo
-                            mimeType
-                            blurhash
-                            originalId
                             url
                             createdAt
                             alt
@@ -40,6 +26,7 @@ function MainSecond() {
                         content {
                             value
                         }
+                        slug
                     }
                 }
             }
@@ -47,13 +34,15 @@ function MainSecond() {
     `);
     return (
         <>
+            <Nav />
             <h1>hej</h1>
             <div>
                 {data.allDatoCmsFlex.edges.map(({ node }) => {
                     return (
                         <div key={node.id}>
-                            {node.title} ---- {node.data} <StructuredText data={node.content.value} />
-                            <img src={node.gallery[0].url} alt="" />
+                            <button>
+                                <a href={node.slug}>Kliknij tuuuuu</a>
+                            </button>
                         </div>
                     );
                 })}
@@ -61,3 +50,4 @@ function MainSecond() {
         </>
     );
 }
+export default Blog;
