@@ -1,5 +1,4 @@
 import React from "react";
-import "../Styles/mainFirst.scss";
 import { StaticImage } from "gatsby-plugin-image";
 import mainLogo from "../images/mainLogo.svg";
 function MainFirst() {
@@ -11,9 +10,7 @@ function MainFirst() {
                     <div className="Hello__Iam">
                         {1 ? "Jestem Piotrek" : "I am Peter"}
                         <br />
-                        <div className="Hello__fav">
-                            {1 ? "Front-Endowiec" : "Junior Front-end"}
-                        </div>
+                        <div className="Hello__fav">{1 ? "Front-Endowiec" : "Junior Front-end"}</div>
 
                         {1 ? "To jest moja strona" : "This is my webiste"}
                         <br />

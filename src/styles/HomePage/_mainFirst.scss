@@ -3,20 +3,19 @@ main {
     background-position: center;
     background-size: cover;
     scroll-snap-align: start;
-    width: 100vw;
+
     min-height: 90vh;
     color: white;
     box-sizing: border-box;
     .Hello {
         padding: 0 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between);
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
         box-sizing: border-box;
         min-height: 90vh;
+        font-weight: 400;
         &__vector {
             font-size: 5em;
             position: relative;
@@ -42,10 +41,13 @@ main {
         }
         &__Iam {
             font-size: 1.4em;
+            font-weight: 200;
             .Hello__fav {
                 transition: all 1s ease;
                 color: var(--favourite);
                 padding-bottom: 20px;
+                font-weight: 500;
+                margin-left: clamp(10px, 5vw, 30px);
             }
         }
         .Hello__brand {
@@ -84,9 +86,7 @@ main {
     main {
         .Hello {
             padding: 100px 50px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(space-between);
             max-width: 1050px;
             margin-left: auto;
             margin-right: auto;
@@ -98,6 +98,79 @@ main {
             }
             .Hello__brand {
                 align-self: flex-end;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 850px) {
+    main {
+        min-height: auto;
+        .Hello {
+            flex-direction: column;
+            padding: 50px 0 0;
+            .Hello__left {
+                align-self: center;
+                .Hello__vector {
+                    margin-bottom: 5px;
+                    &::after {
+                        width: 320px;
+                    }
+                }
+                .Hello__Iam .Hello__fav {
+                    padding-bottom: 10px;
+                }
+            }
+            .Hello__brand {
+                align-self: center;
+                margin-top: 60px;
+                .Hello__title {
+                    margin-top: 20px;
+                }
+
+                img {
+                    width: 280px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    main {
+        .Hello {
+            .Hello__left {
+                padding: 40px 20px 60px;
+                .Hello__vector {
+                    &::after {
+                        width: 300px;
+                    }
+                }
+            }
+            .Hello__brand {
+                align-self: center;
+
+                img {
+                    width: 260px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        .Hello {
+            .Hello__left {
+                .Hello__vector {
+                    &::after {
+                        width: 280px;
+                    }
+                }
+            }
+            .Hello__brand {
+                img {
+                    width: 260px;
+                }
             }
         }
     }

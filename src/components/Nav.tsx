@@ -1,5 +1,5 @@
-import "../styles/Nav.scss";
 import * as React from "react";
+import { Link } from "gatsby";
 // import MiniLogo from '../Components/minilogo';
 
 // Icons
@@ -13,7 +13,9 @@ function Nav() {
                 <li>
                     <a>{1 ? "Projekty" : "Projects"}</a>
                 </li>
-                <li>Blog</li>
+                <li>
+                    <Link to="/Blog">Blog</Link>
+                </li>
                 <li>{1 ? "Kontakt" : "Contact"}</li>
                 <li className="nav__icon">
                     <a href="https://github.com/Piotrko64">
