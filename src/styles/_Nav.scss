@@ -126,7 +126,8 @@ nav {
             flex-direction: column;
             height: 28px;
             cursor: pointer;
-
+            margin-right: 25px;
+            margin-left: 25px;
             width: 36px;
             transition: all 0.5s ease;
             .nav__btnline {
@@ -145,7 +146,7 @@ nav {
                 }
             }
             &.active {
-                transform: rotateY(180deg);
+                transform: rotateY(-180deg);
                 .nav__btnline {
                     &:nth-child(1) {
                         transform: rotate(45deg);
@@ -163,14 +164,14 @@ nav {
             width: 100%;
             max-width: 800px;
             height: 100%;
-
+            transition: all 0.2s ease;
             flex-direction: column;
 
             @include flex(flex-start);
             padding-top: 80px;
             position: fixed;
             top: 0;
-            right: 100%;
+            left: 100%;
             background-color: $grey;
             max-width: none;
             li {
@@ -216,6 +217,9 @@ nav {
                 &.margin-left {
                     margin-left: 0px;
                 }
+            }
+            &.active {
+                left: 0;
             }
         }
     }

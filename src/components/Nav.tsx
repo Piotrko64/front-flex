@@ -3,12 +3,13 @@ import { Link } from "gatsby";
 
 // Icons
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
-const [nav, useNav] = useState<boolean>(false);
+
 function Nav() {
+    const [nav, useNav] = useState<boolean>(false);
     return (
         <nav className="padding">
             <div className="nav__logo"></div>
-            <ul className="nav__ul">
+            <ul className={nav ? "nav__ul active" : "nav__ul"}>
                 <li>
                     <a>{1 ? "Projekty" : "Projects"}</a>
                 </li>
