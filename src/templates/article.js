@@ -93,7 +93,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                     rel="stylesheet"
                 ></link>
             </Helmet>
-
+            <Nav />
             <article className={classes.article}>
                 <div
                     class={classes.article__back}
