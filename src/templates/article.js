@@ -20,7 +20,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                 <link rel="preconnect" href="../styles/index.scss"></link>
             </Helmet>
             <Nav />
-            <article>
+            <article class="article">
                 <div className="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
                     <h1>{article.title}</h1>
                 </div>
