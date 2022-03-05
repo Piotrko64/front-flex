@@ -4,7 +4,7 @@ import React from "react";
 import Nav from "../components/Nav";
 import Helmet from "react-helmet";
 import { createUseStyles } from "react-jss";
-
+import "../styles/index.scss";
 const useStyles = createUseStyles({
     "@global": {
         body: {
@@ -90,7 +90,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                     href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
                     rel="stylesheet"
                 ></link>
-                <link rel="preconnect" href="../../styles/index.scss"></link>
+                <link rel="preconnect" href="../styles/index.scss"></link>
             </Helmet>
             <Nav />
             <article className={classes.article}>
