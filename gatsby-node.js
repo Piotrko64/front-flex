@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     result.data.allDatoCmsFlex.edges.forEach((edge) => {
         createPage({
-            path: `/Posts/${edge.node.slug}`,
+            path: `/posts/${edge.node.slug}`,
             component: articleTemplate,
             context: {
                 slug: edge.node.slug,

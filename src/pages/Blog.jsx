@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import blogBack from "../images/blogBackground.jpeg";
 import React from "react";
 import Nav from "../components/Nav";
-
+import "../styles/index.scss";
 function Blog() {
     const data = useStaticQuery(graphql`
         {
@@ -40,7 +40,7 @@ function Blog() {
                                     <h2>{node.title}</h2>
                                     <p>{node.thumbnailtext}</p>
                                     <button>
-                                        <a href={"/Posts/" + node.slug}>Read more</a>
+                                        <a href={"/posts/" + node.slug}>Read more</a>
                                     </button>
                                 </div>
                             </div>
