@@ -3,12 +3,15 @@ import { Link } from "gatsby";
 
 // Icons
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
-
+import miniLogo from "../images/minilogo.svg";
 function Nav() {
     const [nav, useNav] = useState<boolean>(false);
     return (
         <nav className="padding">
-            <div className="nav__logo"></div>
+            <a href="../../../">
+                <img src={miniLogo} alt="" className="nav__logo" />
+            </a>
+
             <ul className={nav ? "nav__ul active" : "nav__ul"}>
                 <li>
                     <a>{1 ? "Projekty" : "Projects"}</a>

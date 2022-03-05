@@ -9,7 +9,7 @@ nav {
     background: $black;
     color: white;
     box-sizing: border-box;
-    @include flex(flex-end);
+    @include flex(space-between);
     height: 75px;
     font-family: "Oswald", sans-serif;
     font-weight: 300;
