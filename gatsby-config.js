@@ -20,5 +20,4 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
     ],
-    include: ["src/components", "src/custom.d.ts"],
 };
