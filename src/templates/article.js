@@ -11,6 +11,7 @@ const useStyles = createUseStyles({
     "@global": {
         body: {
             margin: 0,
+            fontSize: "22px",
         },
         a: {
             textDecoration: "underline",
@@ -85,6 +86,12 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
         <>
             <Helmet>
                 <title>{article.title}</title>
+                <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+                    rel="stylesheet"
+                ></link>
             </Helmet>
 
             <article className={classes.article}>
