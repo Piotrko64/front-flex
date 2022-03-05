@@ -2,10 +2,13 @@ import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
 import React from "react";
 import Nav from "../components/Nav";
-
+import Helmet from "react-helmet";
 const Article = ({ pageContext: { slug }, data: { article } }) => {
     return (
         <>
+            <Helmet>
+                <link rel="stylesheet" href="../styles/index.css"></link>
+            </Helmet>
             <Nav />
             <article class="article">
                 <div class="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>

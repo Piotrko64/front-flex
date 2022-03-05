@@ -10,7 +10,7 @@ nav {
     color: white;
     box-sizing: border-box;
     @include flex(space-between);
-    height: 75px;
+    height: 70px;
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     z-index: 999;
@@ -180,7 +180,7 @@ nav {
                 border-left: 0px solid var(--favourite);
                 border-right: 0px solid var(--favourite);
                 margin-left: -5px;
-                font-size: 1.25em;
+                font-size: 1.5em;
                 transform-origin: center;
                 flex-direction: row;
                 box-sizing: content-box;
@@ -206,6 +206,8 @@ nav {
                     font-size: 1.2em;
                     height: auto;
                     border: none;
+                    margin-bottom: 40px;
+                    transform: scale(1.5);
                     &.settings {
                         &:hover svg {
                             transform: rotateZ(270deg);
