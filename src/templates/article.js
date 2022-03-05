@@ -3,12 +3,17 @@ import { StructuredText } from "react-datocms";
 import React from "react";
 import Nav from "../components/Nav";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 const Article = ({ pageContext: { slug }, data: { article } }) => {
+    const Title = styled.div`
+        font-size: 1.5em;
+        text-align: center;
+        color: red;
+    `;
     return (
         <>
             <Helmet>
                 <title>{article.title}</title>
-                <link rel="stylesheet" href="../common.css"></link>
             </Helmet>
             <Nav />
             <article class="article">
@@ -16,7 +21,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                     <h1>{article.title}</h1>
                 </div>
                 <div class="article__describe">
-                    <span>{article.data}</span>
+                    <Title>{article.data}</Title>
                     <StructuredText data={article.content.value} />
                     <div class="article__gallery">
                         <img src={article.gallery[0].url} />
