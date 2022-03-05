@@ -34,7 +34,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
             <button className={classes.myButton}>
                 <span className={classes.myLabel}>analfabeta</span>
             </button>
-            <Article>
+            <article className="article">
                 <div class="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
                     <h1>{article.title}</h1>
                 </div>
@@ -45,7 +45,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                         <img src={article.gallery[0].url} />
                     </div>
                 </div>
-            </Article>
+            </article>
         </>
     );
 };
