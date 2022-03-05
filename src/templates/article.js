@@ -23,14 +23,13 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
             <article>
                 <div className="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
                     <h1>{article.title}</h1>
-                    {/* </div>
-                <div class={classes.article__describe}>
-                    <span class={classes.span}>{article.data}</span>
+                </div>
+                <div className="article__describe">
+                    <span>{article.data}</span>
                     <StructuredText data={article.content.value} />
-                    <div class={classes.article__gallery}>
-                        <img src={article.gallery[0].url} class={classes.img} />
+                    <div className="article__gallery">
+                        <img src={article.gallery[0].url} />
                     </div>
-                </div> */}
                 </div>
             </article>
         </>
