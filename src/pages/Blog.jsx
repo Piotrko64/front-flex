@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { StructuredText } from "react-datocms";
+import blogBack from "../images/blogBackground.jpeg";
 import React from "react";
 import Nav from "../components/Nav";
 
@@ -9,24 +9,13 @@ function Blog() {
             allDatoCmsFlex {
                 edges {
                     node {
-                        id
-                        title
-                        seotitle
-                        gallery {
-                            url
-                            createdAt
-                            alt
-                            title
-                            customData
-                        }
-                        data
-                        color {
-                            rgb
-                        }
-                        content {
-                            value
-                        }
                         slug
+                        title
+                        thumbnail {
+                            url
+                        }
+                        thumbnailtext
+                        thumbnailtextpl
                     }
                 }
             }
@@ -35,13 +24,18 @@ function Blog() {
     return (
         <>
             <Nav />
-            <h1>hej</h1>
+            <div class="blog">
+                <div class="blog__back" style={{ backgroundImage: `url(${blogBack})` }}>
+                    <h1>BLOG</h1>
+                </div>
+                <div class="blog__grid"></div>
+            </div>
             <div>
                 {data.allDatoCmsFlex.edges.map(({ node }) => {
                     return (
-                        <div key={node.id}>
+                        <div key={node.tilte}>
                             <button>
-                                <a href={node.slug}>Kliknij tuuuuu</a>
+                                <a href={"/Posts/" + node.slug}>Kliknij tuuuuu</a>
                             </button>
                         </div>
                     );

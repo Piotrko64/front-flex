@@ -1,0 +1,60 @@
+.article {
+    background-color: $black;
+    min-height: 100vh;
+    font-family: "OSWALD";
+    &__back {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-attachment: fixed;
+        height: 35vh;
+        max-width: 100vw;
+        position: relative;
+
+        text-transform: uppercase;
+        color: black;
+        text-align: center;
+        @include flex();
+
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            font-weight: 300;
+            transform: translateY(-50%);
+            padding: 0px 25px;
+            background-color: white;
+            font-size: 3.2rem;
+            width: min-content;
+            -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 1);
+        }
+    }
+    &__describe {
+        margin-top: 15vh;
+        max-width: 800px;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(41, 41, 41);
+        color: white;
+        -webkit-box-shadow: 0px 0px 100px -1px rgba(41, 41, 41, 1);
+        -moz-box-shadow: 0px 0px 100px -1px rgba(41, 41, 41, 1);
+        box-shadow: 0px 0px 100px -1px rgba(41, 41, 41, 1);
+        span {
+            font-style: italic;
+        }
+        p {
+            font-weight: 300;
+        }
+        .article__gallery {
+            @include flex();
+            img {
+                max-width: 340px;
+                padding: 20px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.blog {
+    background-color: $black;
+    min-height: 100vh;
+    font-family: "OSWALD";
+    &__back {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        height: 35vh;
+        max-width: 100vw;
+        position: relative;
+
+        text-transform: uppercase;
+        color: black;
+        text-align: center;
+        @include flex();
+        h1 {
+            margin: 0;
+            position: absolute;
+
+            font-weight: 400;
+            transform: translateY(+25%);
+            padding: 0px 25px;
+            color: white;
+            font-size: 4.2rem;
+            width: min-content;
+        }
+    }
+    &__grid {
+    }
+}

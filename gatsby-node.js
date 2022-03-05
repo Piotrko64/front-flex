@@ -1,11 +1,4 @@
 const path = require(`path`);
-// const wrapper = (promise) =>
-//     promise.then((result) => {
-//         if (result.erros) {
-//             throw result.errors;
-//         }
-//         return result;
-//     });
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
@@ -19,15 +12,24 @@ exports.createPages = async ({ graphql, actions }) => {
                     node {
                         slug
                         title
+                        background {
+                            url
+                        }
+                        content {
+                            value
+                        }
+                        gallery {
+                            url
+                        }
                     }
                 }
             }
         }
     `);
-    console.log(result.data);
+
     result.data.allDatoCmsFlex.edges.forEach((edge) => {
         createPage({
-            path: `${edge.node.slug}`,
+            path: `/Posts/${edge.node.slug}`,
             component: articleTemplate,
             context: {
                 slug: edge.node.slug,
