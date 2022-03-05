@@ -1,10 +1,9 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
-// import MiniLogo from '../Components/minilogo';
 
 // Icons
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
-
+const [nav, useNav] = useState<boolean>(false);
 function Nav() {
     return (
         <nav className="padding">
@@ -26,7 +25,12 @@ function Nav() {
                     <AiFillSetting />
                 </li>
             </ul>
-            <div className="nav__btn">
+            <div
+                className={nav ? "nav__btn active" : "nav__btn"}
+                onClick={() => {
+                    useNav(!nav);
+                }}
+            >
                 <div className="nav__btnline"></div>
                 <div className="nav__btnline"></div>
                 <div className="nav__btnline"></div>
