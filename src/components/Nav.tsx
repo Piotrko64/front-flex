@@ -13,9 +13,7 @@ function Nav() {
             </a>
 
             <ul className={nav ? "nav__ul active" : "nav__ul"}>
-                <li>
-                    <a>{1 ? "Projekty" : "Projects"}</a>
-                </li>
+                <li>{1 ? "Projekty" : "Projects"}</li>
                 <li>
                     <Link to="/Blog">Blog</Link>
                 </li>
