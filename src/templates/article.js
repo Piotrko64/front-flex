@@ -4,7 +4,6 @@ import React from "react";
 import Nav from "../components/Nav";
 
 const Article = ({ pageContext: { slug }, data: { article } }) => {
-    console.log(article.gallery[0].url);
     return (
         <>
             <Nav />

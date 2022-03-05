@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 // Icons
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
-import miniLogo from "../images/minilogo.svg";
+import miniLogo from "../images/minilogo.png";
 function Nav() {
     const [nav, useNav] = useState(false);
     return (
