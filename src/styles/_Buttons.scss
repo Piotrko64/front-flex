@@ -1,15 +1,13 @@
-$grey: #2F3437;
-$black: #282C2F;
-button{
+button {
     border: 3px solid var(--favourite);
     color: white;
     background: $grey;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     font-size: 0.9em;
     padding: 5px 15px;
     cursor: pointer;
     margin-top: 20px;
-    &:hover{
+    &:hover {
         background: black;
     }
 }

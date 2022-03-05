@@ -3,7 +3,7 @@
 nav {
     position: fixed;
     width: 100vw;
-    background: #252728;
+    background: $grey;
     color: white;
     box-sizing: border-box;
     @include flex(space-between);
@@ -128,6 +128,7 @@ nav {
 
             width: 36px;
             transition: all 0.5s ease;
+
             .nav__btnline {
                 background-color: white;
                 height: 3px;
@@ -158,68 +159,86 @@ nav {
                 }
             }
         }
-        .nav__ul {
-            width: 100%;
-            max-width: 800px;
-            height: 100%;
-            transition: all 0.2s ease;
-            flex-direction: column;
+        @media (orientation: landscape) {
+            .nav__btn {
+                display: none;
+            }
+        }
+        @media (orientation: portrait) {
+            .nav__ul {
+                width: 100%;
+                max-width: 800px;
+                height: 100vh;
+                transition: all 0.2s ease;
+                flex-direction: column;
 
-            @include flex(flex-start);
-            padding-top: 80px;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            background-color: $grey;
-            max-width: none;
-            li {
-                padding: 20px 20px;
-                border-left: 0px solid var(--favourite);
-                border-right: 0px solid var(--favourite);
-                margin-left: -5px;
-                font-size: 1.5em;
-                transform-origin: center;
-                flex-direction: row;
-                box-sizing: content-box;
-                cursor: pointer;
-                @include flex;
-                height: 55px;
-                transform-origin: center;
-                transition: all 0.15s ease-in;
-                flex-shrink: 300px;
-                &:first-child {
-                    border-left: none;
-                }
-                &:nth-child(3) {
-                    border-right: none;
-                }
-                &:hover {
-                    height: 70px;
-                    font-size: 1.4em;
-                    background-color: $grey;
-                }
-                &.nav__icon {
-                    padding: 0 10px;
-                    font-size: 1.2em;
-                    height: auto;
-                    border: none;
-                    margin-bottom: 40px;
-                    transform: scale(1.5);
-                    &.settings {
-                        &:hover svg {
-                            transform: rotateZ(270deg);
-                        }
-                        svg {
-                            transition: all 0.9s ease;
+                @include flex(flex-start);
+                padding-top: 80px;
+                position: fixed;
+                top: 0;
+                left: 100%;
+                background-color: $grey;
+                max-width: none;
+                li {
+                    padding: 5px 5px;
+                    border-left: 0px solid var(--favourite);
+                    border-right: 0px solid var(--favourite);
+                    margin-left: -5px;
+                    font-size: 1.5em;
+                    transform-origin: center;
+                    flex-direction: row;
+                    box-sizing: content-box;
+                    cursor: pointer;
+                    @include flex;
+                    height: 55px;
+                    transform-origin: center;
+                    transition: all 0.15s ease-in;
+                    flex-shrink: 200px;
+                    &:first-child {
+                        border-left: none;
+                    }
+                    &:nth-child(3) {
+                        border-right: none;
+                    }
+                    &:hover {
+                        height: 70px;
+                        font-size: 1.4em;
+                        background-color: $grey;
+                    }
+                    &.nav__icon {
+                        padding: 0 10px;
+                        font-size: 1.2em;
+                        height: auto;
+                        border: none;
+                        margin-bottom: 40px;
+                        transform: scale(1.5);
+                        &.settings {
+                            &:hover svg {
+                                transform: rotateZ(270deg);
+                            }
+                            svg {
+                                transition: all 0.9s ease;
+                            }
                         }
                     }
+                    &.margin-left {
+                        margin-left: 0px;
+                    }
                 }
-                &.margin-left {
-                    margin-left: 0px;
+                &.active {
+                    left: 0;
                 }
             }
-            &.active {
-                left: 0;
+        }
+        @media (orientation: landscape) {
+            .nav__ul {
+                li {
+                    padding: 5px 20px;
+
+                    font-size: 1.4em;
+
+                    flex-shrink: 200px;
+                }
             }
         }
     }
