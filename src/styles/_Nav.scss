@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@300;400;500;700&family=Sora:wght@300;400;500;600&display=swap");
 
-$grey: #2f3437;
-$black: #282c2f;
-
 nav {
     position: fixed;
     width: 100vw;
-    background: $black;
+    background: #252728;
     color: white;
     box-sizing: border-box;
     @include flex(space-between);
