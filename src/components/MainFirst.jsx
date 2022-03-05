@@ -1,9 +1,9 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-
+import mainBack from "../images/mainBack.svg";
 function MainFirst() {
     return (
-        <main className="padding">
+        <main className="padding" style={{ backgroundImage: `url(${mainBack})` }}>
             <div className="Hello">
                 <div className="Hello__left">
                     <div className="Hello__vector">Hello</div>
