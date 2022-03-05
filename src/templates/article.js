@@ -7,8 +7,8 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
     return (
         <>
             <Helmet>
-                <link rel="stylesheet" href="../styles/index.css"></link>
                 <title>{article.title}</title>
+                <link rel="stylesheet" href="../common.css"></link>
             </Helmet>
             <Nav />
             <article class="article">
