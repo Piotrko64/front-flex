@@ -1,5 +1,5 @@
 .blog {
-    background-color: $black;
+    background-color: $grey;
     min-height: 100vh;
     font-family: "OSWALD";
     &__back {
@@ -18,7 +18,7 @@
         h1 {
             margin: 0;
             position: absolute;
-
+            text-shadow: 1px 2px 3px #666;
             font-weight: 400;
             transform: translateY(+25%);
             padding: 0px 25px;
@@ -28,5 +28,62 @@
         }
     }
     &__grid {
+        @include maxmargin();
+        display: grid;
+
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
+        .blog__childOfGrid {
+            margin: 5px;
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            overflow: hidden;
+            padding: 5px;
+            img {
+                object-fit: cover;
+                width: 100%;
+                box-sizing: border-box;
+                height: 300px;
+            }
+            .blog__postDescribe {
+                span {
+                    color: $grey;
+                    font-style: italic;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+                h2 {
+                    margin: 0;
+                }
+                button {
+                    border: none;
+                }
+            }
+            // &:nth-child(1) {
+            //     grid-column: 1/3;
+            // }
+        }
+    }
+    @media (min-width: 600px) {
+        &__back {
+            h1 {
+                font-size: 5.2rem;
+            }
+        }
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 850px) {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+
+            .blog__childOfGrid {
+                &:nth-child(1) {
+                    grid-column: 1/3;
+                }
+            }
+        }
     }
 }

@@ -123,18 +123,40 @@ nav {
         }
         .nav__btn {
             @include flex(space-between);
+            flex-direction: column;
+            height: 28px;
+            cursor: pointer;
 
-            height: 26px;
-
-            align-items: center;
-            margin-right: 25px;
+            width: 36px;
+            transition: all 0.5s ease;
             .nav__btnline {
                 background-color: white;
-                height: 4px;
-                width: 36px;
+                height: 3px;
+                border-radius: 1px;
+                width: 100%;
                 position: relative;
                 z-index: 999;
-                transform: skewX(-45deg);
+                transition: all 0.3s ease;
+                &:nth-child(1) {
+                    transform-origin: top left;
+                }
+                &:nth-child(3) {
+                    transform-origin: bottom left;
+                }
+            }
+            &.active {
+                transform: rotateY(180deg);
+                .nav__btnline {
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+                }
             }
         }
         .nav__ul {

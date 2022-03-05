@@ -16,11 +16,13 @@ function Blog() {
                         }
                         thumbnailtext
                         thumbnailtextpl
+                        data
                     }
                 }
             }
         }
     `);
+    console.log(data.allDatoCmsFlex.edges[0].node.thumbnail.url);
     return (
         <>
             <Nav />
@@ -28,18 +30,23 @@ function Blog() {
                 <div class="blog__back" style={{ backgroundImage: `url(${blogBack})` }}>
                     <h1>BLOG</h1>
                 </div>
-                <div class="blog__grid"></div>
-            </div>
-            <div>
-                {data.allDatoCmsFlex.edges.map(({ node }) => {
-                    return (
-                        <div key={node.tilte}>
-                            <button>
-                                <a href={"/Posts/" + node.slug}>Kliknij tuuuuu</a>
-                            </button>
-                        </div>
-                    );
-                })}
+                <div class="blog__grid">
+                    {data.allDatoCmsFlex.edges.map(({ node }) => {
+                        return (
+                            <div class="blog__childOfGrid">
+                                <img src={node.thumbnail.url} alt="" />
+                                <div class="blog__postDescribe">
+                                    <span>{node.data}</span>
+                                    <h2>{node.title}</h2>
+                                    <p>{node.thumbnailtext}</p>
+                                    <button>
+                                        <a href={"/Posts/" + node.slug}>Read more</a>
+                                    </button>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </>
     );
