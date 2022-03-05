@@ -8,6 +8,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
         <>
             <Helmet>
                 <link rel="stylesheet" href="../styles/index.css"></link>
+                <title>{article.title}</title>
             </Helmet>
             <Nav />
             <article class="article">
