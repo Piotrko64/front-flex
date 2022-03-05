@@ -12,6 +12,9 @@ module.exports = {
                 disableLiveReload: false,
             },
         },
+        {
+            resolve: `gatsby-plugin-styled-components`,
+        },
         "gatsby-plugin-sass",
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sitemap",
