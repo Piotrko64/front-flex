@@ -32,7 +32,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                 <title>{article.title}</title>
             </Helmet>
             <button className={classes.myButton}>
-                <span className={classes.myLabel}>{children}</span>
+                <span className={classes.myLabel}>analfabeta</span>
             </button>
             <Article>
                 <div class="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
