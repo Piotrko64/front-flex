@@ -4,8 +4,12 @@ import { Link } from "gatsby";
 // Icons
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
 import miniLogo from "../images/minilogo.svg";
+
 function Nav() {
     const [nav, useNav] = useState(false);
+    function ChangeNav() {
+        useNav(!nav);
+    }
     return (
         <nav className="padding">
             <a href="../../../">
@@ -29,12 +33,7 @@ function Nav() {
                     <AiFillSetting />
                 </li>
             </ul>
-            <div
-                className={nav ? "nav__btn active" : "nav__btn"}
-                onClick={() => {
-                    useNav(!nav);
-                }}
-            >
+            <div className={nav ? "nav__btn active" : "nav__btn"} onClick={ChangeNav()}>
                 <div className="nav__btnline"></div>
                 <div className="nav__btnline"></div>
                 <div className="nav__btnline"></div>
