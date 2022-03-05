@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import { AiFillGithub, AiFillSetting } from "react-icons/ai";
 import miniLogo from "../images/minilogo.svg";
 function Nav() {
-    const [nav, useNav] = useState<boolean>(false);
+    const [nav, useNav] = useState(false);
     return (
         <nav className="padding">
             <a href="../../../">
