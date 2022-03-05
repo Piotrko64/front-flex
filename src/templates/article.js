@@ -3,37 +3,38 @@ import { StructuredText } from "react-datocms";
 import React from "react";
 import Nav from "../components/Nav";
 import Helmet from "react-helmet";
-
+import jss from "jss";
+import jssPluginGlobal from "jss-plugin-global";
 import { createUseStyles } from "react-jss";
-const useStyles = createUseStyles({
-    myButton: {
-        color: "green",
-        margin: {
-            // jss-plugin-expand gives more readable syntax
-            top: 5, // jss-plugin-default-unit makes this 5px
-            right: 0,
-            bottom: 0,
-            left: "1rem",
+const styles = {
+    "@global": {
+        body: {
+            color: "green",
         },
-        "& span": {
-            // jss-plugin-nested applies this to a child span
-            fontWeight: "bold", // jss-plugin-camel-case turns this into 'font-weight'
+        a: {
+            textDecoration: "underline",
         },
     },
-    myLabel: {
-        fontStyle: "italic",
+};
+const useStyles = createUseStyles({
+    "@global": {
+        body: {
+            margin: 0,
+        },
+        a: {
+            textDecoration: "underline",
+        },
     },
 });
+
 const Article = ({ pageContext: { slug }, data: { article } }) => {
-    const classes = useStyles();
+    useStyles();
     return (
         <>
             <Helmet>
                 <title>{article.title}</title>
             </Helmet>
-            <button className={classes.myButton}>
-                <span className={classes.myLabel}>analfabeta</span>
-            </button>
+
             <article className="article">
                 <div class="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
                     <h1>{article.title}</h1>
