@@ -40,6 +40,7 @@ main {
         &__Iam {
             font-size: 1.4em;
             font-weight: 200;
+            transform: translateX(-25px);
             .Hello__fav {
                 transition: all 1s ease;
                 color: var(--favourite);
