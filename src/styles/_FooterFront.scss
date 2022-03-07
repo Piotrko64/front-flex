@@ -1,0 +1,19 @@
+.footerFront {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 18px;
+    height: 75px;
+    color: white;
+    background-color: black;
+    font-family: "Poppins";
+    span {
+        color: var(--favourite);
+        padding: 0 10px;
+    }
+    img {
+        padding: 10px;
+        width: 40px;
+    }
+}
