@@ -3,11 +3,13 @@
 
 @import "./HomePage/mainFirst";
 @import "./HomePage/mainSecond";
+@import "./HomePage/mainFourth";
 @import "./Buttons";
 @import "./Nav";
 @import "./Baner";
 @import "./Settings";
 @import "./Blog";
+@import "./Contact";
 @import "./article";
 @import "./FooterFront";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
@@ -17,10 +19,30 @@ body {
         "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: $grey;
+    color: white;
+    h1 {
+        font-family: "OSWALD";
+        text-align: center;
+        font-weight: 400;
+    }
 }
 html {
     font-size: 24px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--favourite);
+}
+
 a,
 a:visited {
     margin: 0;

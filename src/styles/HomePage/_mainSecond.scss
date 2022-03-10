@@ -22,13 +22,13 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgb(0, 0, 0) 100%);
     }
     &__photo {
+        margin-top: 40px;
         @include flex();
         img {
-            width: 280px;
-            height: 420px;
+            width: 220px;
+            height: 320px;
             object-fit: cover;
             z-index: 99;
-            top: 20px;
         }
     }
     &__describe {
@@ -43,9 +43,21 @@
         max-width: 900px;
         margin: 40px auto 0;
         h1 {
+            text-align: left;
             color: var(--favourite);
-            font-size: 2em;
-            margin: 0;
+            font-size: 1.6em;
+
+            margin: 0 0 20px;
+        }
+    }
+}
+@media (min-width: 850px) {
+    .About {
+        &__photo {
+            img {
+                width: 280px;
+                height: 420px;
+            }
         }
     }
 }
@@ -75,8 +87,8 @@
         @include flex(space-around);
         &__photo {
             img {
-                width: 360px;
-                height: 500px;
+                width: 320px;
+                height: 460px;
             }
         }
         &__describe {

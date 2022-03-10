@@ -1,13 +1,17 @@
 import React from "react";
 import FooterFront from "../components/FooterFront";
-import MainFirst from "../components/MainFirst";
-import MainSecond from "../components/MainSecond";
+import Layout from "../components/Layout";
+import MainFirst from "../components/homeComponents/MainFirst";
+import MainSecond from "../components/homeComponents/MainSecond";
+import MainFourth from "../components/homeComponents/MainFourth";
 function Main() {
     return (
         <>
-            <MainFirst />
-            <MainSecond />
-            <FooterFront />
+            <Layout>
+                <MainFirst />
+                <MainSecond />
+                <MainFourth />
+            </Layout>
         </>
     );
 }

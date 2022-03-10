@@ -6,7 +6,6 @@ function Baner(value: { img: string; title: string }) {
             <div className="baner" style={{ backgroundImage: `url(${value.img})` }}>
                 <h1>{value.title}</h1>
             </div>
-            ;
         </>
     );
 }
