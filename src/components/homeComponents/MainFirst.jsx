@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import mainBack from "../../images/mainBack.svg";
+import LOGO from "../../images/mainLogo.svg";
 function MainFirst() {
     return (
         <main className="padding" style={{ backgroundImage: `url(${mainBack})` }}>
@@ -19,7 +20,7 @@ function MainFirst() {
                 </div>
                 <div className="Hello__brand">
                     {/* <img src={mainLogo} alt="" /> */}
-                    <StaticImage src="../images/mainLogo.svg" maxWidth="800" />
+                    <img src={LOGO} alt="" />
                     <div className="Hello__title">
                         FRONT <span> FLEX</span>
                     </div>
