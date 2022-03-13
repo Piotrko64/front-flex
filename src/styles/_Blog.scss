@@ -29,7 +29,7 @@
     &__grid {
         @include maxmargin();
         display: grid;
-
+        color: black;
         grid-template-columns: repeat(1, 1fr);
         margin-top: 20px;
         .blog__childOfGrid {

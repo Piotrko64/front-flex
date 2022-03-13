@@ -10,14 +10,14 @@ export default function MainFourth() {
             <section className="Projects">
                 <>
                     <Project
-                        title="CRUD"
+                        title="CRUD Note"
                         p="Create, Read, Update, Delete app with back-end"
                         github="https://github.com/Piotrko64/Front-CRUD-Notes"
                         host="https://piotrkocrud64.netlify.app"
                         back={CRUD}
                     />
                     <Project
-                        title="SA"
+                        title="Sound Architecture"
                         p="Music typescript website for Sound Architecture"
                         github="https://github.com/Piotrko64/react-sound-architecture"
                         host="https://soundarchitecture.netlify.app"

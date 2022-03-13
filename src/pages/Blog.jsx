@@ -1,9 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 import blogBack from "../images/blogBackground.jpeg";
-import React from "react";
+import React, { useContext } from "react";
 import Nav from "../components/Nav";
 import Baner from "../components/Baner";
 import "../styles/index.scss";
+import { Context } from "../components/Layout";
 import Layout from "../components/Layout";
 function Blog() {
     const data = useStaticQuery(graphql`
@@ -24,7 +25,7 @@ function Blog() {
             }
         }
     `);
-    console.log(data.allDatoCmsFlex.edges[0].node.thumbnail.url);
+    let value = useContext(Context);
     return (
         <>
             <Layout>
@@ -38,7 +39,11 @@ function Blog() {
                                     <div class="blog__postDescribe">
                                         <span>{node.data}</span>
                                         <h2>{node.title}</h2>
-                                        <p>{node.thumbnailtext}</p>
+                                        <p>
+                                            {value.settings.language === "ANG"
+                                                ? node.thumbnailtext
+                                                : node.thumbnailtextPL}
+                                        </p>
                                         <button>
                                             <a href={"/posts/" + node.slug}>Read more</a>
                                         </button>
