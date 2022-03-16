@@ -20,12 +20,13 @@ main {
             z-index: 1;
             text-shadow: 20px 15px 1px #00000027;
             transform: translateX(-10px);
+            text-align: center;
             &::after {
                 content: "";
                 -webkit-box-shadow: 0px 0px 12px -1px #000000;
                 box-shadow: 0px 0px 12px -1px #000000;
                 clip-path: polygon(15% 0, 100% 0%, 85% 100%, 0% 100%);
-                transform: translate(-15%);
+                transform: translate(-5%);
                 background-color: var(--favourite);
                 height: 50px;
                 width: 380px;

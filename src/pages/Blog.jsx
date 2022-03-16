@@ -32,12 +32,12 @@ function Blog() {
                 <div class="blog">
                     <Baner img={blogBack} title="Blog" />
                     <div class="blog__grid">
-                        {data.allDatoCmsFlex.edges.map(({ node }) => {
+                        {data.allDatoCmsFlex.edges.reverse().map(({ node }) => {
                             return (
                                 <div class="blog__childOfGrid">
                                     <img src={node.thumbnail.url} alt="" />
                                     <div class="blog__postDescribe">
-                                        <span>{node.data}</span>
+                                        <data>{node.data}</data>
                                         <h2>{node.title}</h2>
                                         <p>{node.thumbnailtext}</p>
                                         <button>

@@ -1,5 +1,6 @@
 .footer {
     padding-top: clamp(30px, 10vw, 60px);
+    background-color: black;
     &__flex {
         @include flex(flex-start);
         flex-flow: row wrap;
@@ -25,8 +26,8 @@
         justify-content: center;
         align-items: center;
         flex-flow: row wrap;
-        font-size: 18px;
-        padding: clamp(10px, 5vw, 20px);
+        font-size: 0.8rem;
+        padding: clamp(5px, 5vw, 20px);
         color: white;
         background-color: black;
         font-family: "Poppins";
