@@ -5,7 +5,7 @@
         flex-flow: row wrap;
         .footer__oneInfo {
             flex: 1;
-            @include flex();
+            @include flex(flex-start);
             flex-direction: column;
             img {
                 height: 75px;

@@ -49,6 +49,10 @@
 
             margin: 0 0 20px;
         }
+        span {
+            color: var(--favourite);
+            font-weight: 600;
+        }
     }
 }
 @media (min-width: 850px) {
