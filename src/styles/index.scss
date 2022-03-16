@@ -22,6 +22,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: $grey;
     color: white;
+    -webkit-tap-highlight-color: transparent;
     h1 {
         font-family: "OSWALD";
         text-align: center;

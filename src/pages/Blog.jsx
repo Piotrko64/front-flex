@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 import blogBack from "../images/blogBackground.jpeg";
-import React, { useContext } from "react";
-import Nav from "../components/Nav";
+import React from "react";
+
 import Baner from "../components/Baner";
 import "../styles/index.scss";
-import { Context } from "../components/Layout";
+
 import Layout from "../components/Layout";
 function Blog() {
     const data = useStaticQuery(graphql`
