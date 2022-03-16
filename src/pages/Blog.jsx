@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import blogBack from "../images/blogBackground.jpeg";
 import React from "react";
-
+import "../styles/Blog.scss";
 import Baner from "../components/Baner";
 import "../styles/index.scss";
 
@@ -32,7 +32,7 @@ function Blog() {
                 <div class="blog">
                     <Baner img={blogBack} title="Blog" />
                     <div class="blog__grid">
-                        {data.allDatoCmsFlex.edges.reverse().map(({ node }) => {
+                        {data.allDatoCmsFlex.edges.map(({ node }) => {
                             return (
                                 <div class="blog__childOfGrid">
                                     <img src={node.thumbnail.url} alt="" />

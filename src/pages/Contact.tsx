@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import Baner from "../components/Baner";
+import "../styles/Contact.scss";
 import backContact from "../images/contact.jpg";
 import Layout from "../components/Layout";
 const Contact = () => {

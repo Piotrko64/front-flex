@@ -1,3 +1,6 @@
+@import "./Variables";
+@import "./mixin";
+
 .contact {
     background-color: $black;
     &__info {
