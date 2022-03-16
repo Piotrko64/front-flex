@@ -25,7 +25,7 @@ function Blog() {
             }
         }
     `);
-    let value = useContext(Context);
+
     return (
         <>
             <Layout>
@@ -39,11 +39,7 @@ function Blog() {
                                     <div class="blog__postDescribe">
                                         <span>{node.data}</span>
                                         <h2>{node.title}</h2>
-                                        <p>
-                                            {value.settings.language === "ANG"
-                                                ? node.thumbnailtext
-                                                : node.thumbnailtextPL}
-                                        </p>
+                                        <p>{node.thumbnailtext}</p>
                                         <button>
                                             <a href={"/posts/" + node.slug}>Read more</a>
                                         </button>

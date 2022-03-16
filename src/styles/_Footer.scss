@@ -1,0 +1,42 @@
+.footer {
+    padding-top: clamp(30px, 10vw, 60px);
+    &__flex {
+        @include flex(flex-start);
+        flex-flow: row wrap;
+        .footer__oneInfo {
+            flex: 1;
+            @include flex();
+            flex-direction: column;
+            img {
+                height: 75px;
+            }
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: var(--favourite);
+                }
+            }
+        }
+    }
+    .footerFront {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        font-size: 18px;
+        padding: clamp(10px, 5vw, 20px);
+        color: white;
+        background-color: black;
+        font-family: "Poppins";
+        span {
+            color: var(--favourite);
+            padding: 0 10px;
+        }
+        img {
+            padding: 10px;
+            width: 40px;
+        }
+    }
+}

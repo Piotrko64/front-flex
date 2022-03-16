@@ -14,21 +14,18 @@ function Nav() {
 
             <ul className={nav ? "nav__ul active" : "nav__ul"}>
                 <li>
-                    <Link to="/Blog">Projects</Link>
+                    <Link to="/Projects">Projects</Link>
                 </li>
                 <li>
                     <Link to="/Blog">Blog</Link>
                 </li>
                 <li>
-                    <Link to="/Contact">{1 ? "Kontakt" : "Contact"}</Link>
+                    <Link to="/Contact">Contact</Link>
                 </li>
                 <li className="nav__icon">
                     <a href="https://github.com/Piotrko64">
                         <AiFillGithub />
                     </a>
-                </li>
-                <li className="nav__icon settings">
-                    <AiFillSetting />
                 </li>
             </ul>
             <div

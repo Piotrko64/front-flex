@@ -9,11 +9,10 @@ function MainFirst() {
                 <div className="Hello__left">
                     <div className="Hello__vector">Hello</div>
                     <div className="Hello__Iam">
-                        {1 ? "Jestem Piotrek" : "I am Peter"}
+                        I am Peter
                         <br />
-                        <div className="Hello__fav">{1 ? "Front-Endowiec" : "Junior Front-end"}</div>
-
-                        {1 ? "To jest moja strona" : "This is my webiste"}
+                        <div className="Hello__fav">Junior Front-end Dev</div>
+                        This is my webiste
                         <br />
                         <div className="Hello__fav">Front-Flex</div>
                     </div>

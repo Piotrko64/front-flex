@@ -13,7 +13,7 @@ const Contact = () => {
     });
     return (
         <Layout>
-            <div className="contact">
+            <main className="contact">
                 <Baner img={backContact} title="Contact" />
                 <div className="contact__info padding">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error saepe voluptate, excepturi
@@ -51,7 +51,7 @@ const Contact = () => {
                         <button type="submit">Send</button>
                     </form>
                 </div>
-            </div>
+            </main>
         </Layout>
     );
 };
