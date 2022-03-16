@@ -7,6 +7,7 @@ import MainFourth from "../components/homeComponents/MainFourth";
 import MainThird from "../components/homeComponents/MainThird";
 function Main() {
     useEffect(() => {
+        window.scroll(0, 0);
         const colors = [
             "#7982db",
             "#ffba26",

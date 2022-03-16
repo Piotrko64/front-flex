@@ -7,7 +7,7 @@ import "../styles/index.scss";
 
 import Layout from "../components/Layout";
 function Blog() {
-    const data = useStaticQuery(graphql`
+    let data = useStaticQuery(graphql`
         {
             allDatoCmsFlex {
                 edges {
@@ -19,25 +19,28 @@ function Blog() {
                         }
                         thumbnailtext
                         thumbnailtextpl
-                        data
+                        data(fromNow: true)
                     }
                 }
             }
         }
     `);
-
+    let dataFilter = data.allDatoCmsFlex.edges.sort(
+        (a, b) => a.node.data.split(" ")[0] > b.node.data.split(" ")[0]
+    );
+    console.log(dataFilter);
     return (
         <>
             <Layout>
                 <div class="blog">
                     <Baner img={blogBack} title="Blog" />
                     <div class="blog__grid">
-                        {data.allDatoCmsFlex.edges.map(({ node }) => {
+                        {dataFilter.map(({ node }) => {
                             return (
                                 <div class="blog__childOfGrid">
                                     <img src={node.thumbnail.url} alt="" />
                                     <div class="blog__postDescribe">
-                                        <data>{node.data}</data>
+                                        {/* <data>{node.data}</data> */}
                                         <h2>{node.title}</h2>
                                         <p>{node.thumbnailtext}</p>
                                         <button>
