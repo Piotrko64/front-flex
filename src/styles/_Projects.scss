@@ -1,0 +1,66 @@
+.MyProjects {
+    p {
+        @include maxmargin();
+        text-align: center;
+    }
+    &__projectOne {
+        background-color: $grey;
+        .projectOne__back {
+            background-color: var(--favourite);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include flex();
+            min-height: 160px;
+            .projectOne__title {
+                padding: 10px;
+                color: rgb(255, 255, 255);
+                font-size: 2.6rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                text-shadow: 0px 0px 5px #000000;
+                font-family: "OSWALD";
+            }
+            @media (min-width: 1100px) {
+                min-height: 200px;
+            }
+        }
+        .projectOne__describe {
+            @include maxmargin(1200px);
+            text-align: justify;
+
+            padding: auto 25px;
+            .projectOne__icons {
+                @include flex();
+                img {
+                    width: 35px;
+                    padding: 2px;
+                    @media (min-width: 850px) {
+                        width: 45px;
+                        padding: 5px;
+                    }
+                }
+                padding: 10px;
+            }
+            hr {
+                margin: 0;
+                @include maxmargin;
+            }
+        }
+        .projectOne__link {
+            padding-top: 20px;
+            @include flex();
+            a {
+                flex: 1;
+                @include flex();
+                transition: all 0.3s ease;
+                padding: 10px;
+                font-size: 1.5rem;
+                &:hover {
+                    color: var(--favourite);
+                }
+            }
+        }
+    }
+}
