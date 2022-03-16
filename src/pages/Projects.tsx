@@ -1,4 +1,5 @@
 import * as React from "react";
+import "../styles/Projects.scss";
 import { dataProjects } from "../components/homeComponents/dataProjects";
 import Baner from "../components/Baner";
 import backProject from "../images/projects.jpg";
