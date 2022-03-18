@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import Helmet from "react-helmet";
 import "../styles/index.scss";
@@ -9,6 +9,13 @@ import Layout from "../components/Layout";
 
 const Article = ({ pageContext: { slug }, data: { article } }) => {
     console.log(checkCookie("lang"));
+    const [scroll, setScroll] = useState(0);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.pageYOffset);
+            console.log(window.pageYOffset);
+        });
+    }, []);
     return (
         <>
             <Helmet>
@@ -27,7 +34,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                         className="article__back"
                         style={{ backgroundImage: `url(${article.background.url})` }}
                     >
-                        <h1>{article.title}</h1>
+                        <h1 className={scroll > 120 ? "active" : ""}>{article.title}</h1>
                     </div>
                     <div className="article__describe">
                         <span>{article.data}</span>
