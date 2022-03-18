@@ -4,7 +4,7 @@ import js from "../../images/Icons/js.png";
 import nodemailer from "../../images/Icons/nodemailer.png";
 import reactbootstrap from "../../images/Icons/reactbootstrap.svg";
 import gatsby from "../../images/Icons/gatsby.svg";
-import DatoCMS from "../../images/Icons/DatoCMS.png";
+import Dato from "../../images/Icons/Dato.png";
 import angular from "../../images/Icons/angular.png";
 import ts from "../../images/Icons/ts.png";
 import cy from "../../images/Icons/cy.png";
@@ -51,6 +51,6 @@ export const dataProjects = [
         background: FF,
         github: "https://github.com/Piotrko64/react-sound-architecture",
 
-        icons: [gatsby, ts, sass, DatoCMS],
+        icons: [gatsby, ts, sass, Dato],
     },
 ];
