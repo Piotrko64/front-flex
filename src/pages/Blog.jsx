@@ -19,14 +19,19 @@ function Blog() {
                         }
                         thumbnailtext
                         thumbnailtextpl
-                        data(fromNow: true)
+                        data
                     }
                 }
             }
         }
     `);
+    // Custom sorting
     let dataFilter = data.allDatoCmsFlex.edges.sort(
-        (a, b) => a.node.data.split(" ")[0] > b.node.data.split(" ")[0]
+        (a, b) =>
+            b.node.data.split("-")[0] * 100 +
+            b.node.data.split("-")[1] * 10 +
+            b.node.data.split("-")[2] -
+            (a.node.data.split("-")[0] * 100 + a.node.data.split("-")[1] * 10 + a.node.data.split("-")[2])
     );
     console.log(dataFilter);
     return (
@@ -40,7 +45,7 @@ function Blog() {
                                 <div class="blog__childOfGrid">
                                     <img src={node.thumbnail.url} alt="" />
                                     <div class="blog__postDescribe">
-                                        {/* <data>{node.data}</data> */}
+                                        <data>{node.data}</data>
                                         <h2>{node.title}</h2>
                                         <p>{node.thumbnailtext}</p>
                                         <button>
