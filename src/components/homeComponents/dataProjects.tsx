@@ -51,6 +51,6 @@ export const dataProjects = [
         background: FF,
         github: "https://github.com/Piotrko64/react-sound-architecture",
 
-        icons: [gatsby, ts, sass, DatoCMS],
+        icons: [gatsby, ts, sass],
     },
 ];
