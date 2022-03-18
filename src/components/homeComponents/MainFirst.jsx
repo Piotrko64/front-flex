@@ -18,8 +18,8 @@ function MainFirst() {
                     </div>
                 </div>
                 <div className="Hello__brand">
-                    {/* <img src={mainLogo} alt="" /> */}
-                    <img src={LOGO} alt="" />
+                    <StaticImage src="../../images/mainLogo.svg" />
+                    {/* <img src={LOGO} alt="" /> */}
                     <div className="Hello__title">
                         FRONT <span> FLEX</span>
                     </div>

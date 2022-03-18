@@ -1,5 +1,10 @@
 import React from "react";
 
 export default function MainThird() {
-    return <section className="Skills">Skills</section>;
+    return (
+        <>
+            <h1>Skills</h1>
+            <section className="Skills"></section>
+        </>
+    );
 }
