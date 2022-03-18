@@ -4,7 +4,6 @@ import React from "react";
 import "../styles/Blog.scss";
 import Baner from "../components/Baner";
 import "../styles/index.scss";
-
 import Layout from "../components/Layout";
 function Blog() {
     let data = useStaticQuery(graphql`
@@ -33,19 +32,20 @@ function Blog() {
             b.node.data.split("-")[2] -
             (a.node.data.split("-")[0] * 100 + a.node.data.split("-")[1] * 10 + a.node.data.split("-")[2])
     );
-    console.log(dataFilter);
+
     return (
         <>
             <Layout>
-                <div class="blog">
+                <div className="blog">
                     <Baner img={blogBack} title="Blog" />
-                    <div class="blog__grid">
+                    <div className="blog__grid">
                         {dataFilter.map(({ node }) => {
                             return (
-                                <div class="blog__childOfGrid">
+                                <div className="blog__childOfGrid">
                                     <img src={node.thumbnail.url} alt="" />
-                                    <div class="blog__postDescribe">
+                                    <div className="blog__postDescribe">
                                         <data>{node.data}</data>
+
                                         <h2>{node.title}</h2>
                                         <p>{node.thumbnailtext}</p>
                                         <button>

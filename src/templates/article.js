@@ -3,10 +3,12 @@ import { StructuredText } from "react-datocms";
 import React from "react";
 import Nav from "../components/Nav";
 import Helmet from "react-helmet";
-import { createUseStyles } from "react-jss";
 import "../styles/index.scss";
+import { checkCookie, Pl } from "../functions/Cookie";
+import Layout from "../components/Layout";
 
 const Article = ({ pageContext: { slug }, data: { article } }) => {
+    console.log(checkCookie("lang"));
     return (
         <>
             <Helmet>
@@ -19,19 +21,30 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                 ></link>
                 <link rel="preconnect" href="../styles/index.scss"></link>
             </Helmet>
-            <Nav />
-            <article class="article">
-                <div className="article__back" style={{ backgroundImage: `url(${article.background.url})` }}>
-                    <h1>{article.title}</h1>
-                </div>
-                <div className="article__describe">
-                    <span>{article.data}</span>
-                    <StructuredText data={article.content.value} />
-                    <div className="article__gallery">
-                        <img src={article.gallery[0].url} />
+            <Layout>
+                <article className="article">
+                    <div
+                        className="article__back"
+                        style={{ backgroundImage: `url(${article.background.url})` }}
+                    >
+                        <h1>{article.title}</h1>
                     </div>
-                </div>
-            </article>
+                    <div className="article__describe">
+                        <span>{article.data}</span>
+                        {Pl() ? "pl" : "ang"}
+
+                        {Pl() ? (
+                            <StructuredText data={article.contentpl.value} />
+                        ) : (
+                            <StructuredText data={article.content.value} />
+                        )}
+
+                        <div className="article__gallery">
+                            <img src={article.gallery[0].url} />
+                        </div>
+                    </div>
+                </article>
+            </Layout>
         </>
     );
 };
@@ -45,6 +58,9 @@ export const query = graphql`
             }
             data
             content {
+                value
+            }
+            contentpl {
                 value
             }
             gallery {
