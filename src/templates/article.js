@@ -1,14 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { StructuredText } from "react-datocms";
 import React, { useState, useEffect } from "react";
-import Nav from "../components/Nav";
+
 import Helmet from "react-helmet";
 import "../styles/index.scss";
-import { checkCookie, Pl } from "../functions/Cookie";
+
 import Layout from "../components/Layout";
 
 const Article = ({ pageContext: { slug }, data: { article } }) => {
-    console.log(checkCookie("lang"));
     const [scroll, setScroll] = useState(0);
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -38,13 +37,8 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                     </div>
                     <div className="article__describe">
                         <span>{article.data}</span>
-                        {Pl() ? "pl" : "ang"}
 
-                        {Pl() ? (
-                            <StructuredText data={article.contentpl.value} />
-                        ) : (
-                            <StructuredText data={article.content.value} />
-                        )}
+                        <StructuredText data={article.contentpl.value} />
 
                         <div className="article__gallery">
                             <img src={article.gallery[0].url} />
