@@ -4,7 +4,7 @@ import js from "../../images/Icons/js.png";
 import nodemailer from "../../images/Icons/nodemailer.png";
 import reactbootstrap from "../../images/Icons/reactbootstrap.svg";
 import gatsby from "../../images/Icons/gatsby.svg";
-import DatoCMS from "../../images/Icons/DatoCMS.png";
+
 import angular from "../../images/Icons/angular.png";
 import ts from "../../images/Icons/ts.png";
 import cy from "../../images/Icons/cy.png";
