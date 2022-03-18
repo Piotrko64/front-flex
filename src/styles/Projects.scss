@@ -8,6 +8,7 @@
     }
     &__projectOne {
         background-color: $grey;
+
         .projectOne__back {
             background-color: var(--favourite);
             background-position: center;
@@ -30,6 +31,13 @@
             }
         }
         .projectOne__describe {
+            hr {
+                @include maxmargin(1200px);
+                margin-top: 0;
+                margin-bottom: 30px;
+                background-color: var(--favourite);
+                border: 1.5px solid var(--favourite);
+            }
             @include maxmargin(1200px);
             text-align: justify;
 
@@ -46,10 +54,6 @@
                 }
                 padding: 10px;
             }
-            hr {
-                margin: 0;
-                @include maxmargin;
-            }
         }
         .projectOne__link {
             padding-top: 20px;
@@ -61,7 +65,7 @@
                 padding: 10px;
                 font-size: 1.5rem;
                 &:hover {
-                    color: var(--favourite);
+                    background-color: rgba(255, 255, 255, 0.247);
                 }
             }
         }

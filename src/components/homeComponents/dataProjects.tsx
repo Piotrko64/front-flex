@@ -28,7 +28,7 @@ export const dataProjects = [
     },
     {
         name: "IQuiz",
-        describe: `This was my first website with Angular. When I learned React on good level I thinking about knowing next framework. At the beginning I thought about VueJS. I heard that Vue is easy to learn but I wanted challenge! I chose Angular. Why? Because it is more hardly and I think that more employer want Angular Developer. IQuiz is app where you can do and made quiz! I still learn Angular. This is interesting new experience write website with React and Angular`,
+        describe: `This was my first website made with Angular. When I learned React on proper level I started thinking about learning another framerwork. At the beginning I thought about VueJS. I heard that its easy to learn but this time I wanted something more challanging so I chose Angular. Why? Because it is more complicated and has higher demand on labour market.  IQuiz is an app where you can create a quiz! I am still learning Angular. This is interesting and new experience for me to write webiste using both React and Angular.`,
         background: IQuiz,
         github: "https://github.com/Piotrko64/react-sound-architecture",
         host: "https://soundarchitecture.netlify.app",
