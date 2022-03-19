@@ -8,7 +8,7 @@
         @include maxmargin();
 
         color: white;
-        text-align: justify;
+        text-align: center;
         @media (min-width: 850px) {
             margin: 30px auto;
         }
