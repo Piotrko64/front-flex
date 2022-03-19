@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import error from "../images/error.png";
 import Baner from "../components/Baner";
 import Layout from "../components/Layout";
+import "../styles/index";
 const NotFoundPage = () => {
     return (
         <Layout>
