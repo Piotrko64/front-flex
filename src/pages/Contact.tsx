@@ -4,21 +4,17 @@ import Baner from "../components/Baner";
 import "../styles/Contact.scss";
 import backContact from "../images/contact.jpg";
 import Layout from "../components/Layout";
-
+import axios from "axios";
 const Contact = () => {
     async function Send(e) {
         e.preventDefault();
-        const response = await fetch("https://nodemailerff.herokuapp.com", {
-            headers: {
-                "Content-Type": "application/json",
-            },
-            method: "POST",
-
-            body: JSON.stringify({
+        const response = await axios.post(
+            "https://nodemailerff.herokuapp.com",
+            JSON.stringify({
                 email: mess.email,
                 body: mess.text,
-            }),
-        });
+            })
+        );
         console.log(response); // par
         console.log(
             JSON.stringify({
