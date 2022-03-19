@@ -4,24 +4,10 @@ import Baner from "../components/Baner";
 import "../styles/Contact.scss";
 import backContact from "../images/contact.jpg";
 import Layout from "../components/Layout";
-import axios from "axios";
+
 const Contact = () => {
     async function Send(e) {
-        e.preventDefault();
-        const response = await axios.post(
-            "https://nodemailerff.herokuapp.com",
-            JSON.stringify({
-                email: mess.email,
-                body: mess.text,
-            })
-        );
-        console.log(response); // par
-        console.log(
-            JSON.stringify({
-                email: mess.email,
-                body: mess.text,
-            })
-        );
+        e.preventDefault;
     }
 
     const [mess, usemess] = useState<{
@@ -36,18 +22,13 @@ const Contact = () => {
             <main className="contact">
                 <Baner img={backContact} title="Contact" />
                 <div className="contact__info padding">
-                    aLorem ipsum dolor sit amet consectetur adipisicing elit. Error saepe voluptate, excepturi
-                    magni sint ipsum iure? Sapiente, mollitia dolore quae ullam nobis voluptatum veniam! Quo,
-                    corrupti! Nam unde velit assumenda. Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Molestiae magni quis hic tempore explicabo eos nisi vitae voluptate. Eligendi sint
-                    est recusandae quam ipsam similique quisquam quia aspernatur libero id. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Dolore unde qui eligendi minus voluptates quae ex,
-                    eos blanditiis excepturi corporis eaque sunt odio facere voluptatibus fugit iusto
-                    aspernatur doloremque deleniti?
+                    Simple contact form! Write to me if you want talking about coding or if you want me to
+                    make a page for you. Remember that I am willing to cooperate and new experience.
                 </div>
                 <div className="contact__form">
-                    <form>
+                    <form action="mailto:Frontflex@gmail.com">
                         <input
+                            name="subject"
                             type="email"
                             placeholder="Your email to contact"
                             value={mess.email}
@@ -59,6 +40,7 @@ const Contact = () => {
                             }}
                         />
                         <textarea
+                            name="body"
                             placeholder="Write something to me :)"
                             value={mess.text}
                             required

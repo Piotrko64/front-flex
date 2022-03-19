@@ -48,9 +48,8 @@ function Blog() {
 
                                         <h2>{node.title}</h2>
                                         <p>{node.thumbnailtext}</p>
-                                        <button>
-                                            <a href={"/posts/" + node.slug}>Read more</a>
-                                        </button>
+
+                                        <a href={"/posts/" + node.slug}>Read more</a>
                                     </div>
                                 </div>
                             );
