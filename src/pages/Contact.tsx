@@ -9,8 +9,11 @@ const Contact = () => {
     async function Send(e) {
         e.preventDefault();
         const response = await fetch("https://nodemailerff.herokuapp.com", {
-            method: "Post",
-            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+
             body: JSON.stringify({
                 email: mess.email,
                 body: mess.text,
