@@ -6,6 +6,25 @@ import backContact from "../images/contact.jpg";
 import Layout from "../components/Layout";
 
 const Contact = () => {
+    async function Send(e) {
+        e.preventDefault();
+        const response = await fetch("https://nodemailerff.herokuapp.com", {
+            method: "Post",
+            mode: "no-cors",
+            body: JSON.stringify({
+                email: mess.email,
+                body: mess.text,
+            }),
+        });
+        console.log(response); // par
+        console.log(
+            JSON.stringify({
+                email: mess.email,
+                body: mess.text,
+            })
+        );
+    }
+
     const [mess, usemess] = useState<{
         email: string;
         text: string;
@@ -43,6 +62,7 @@ const Contact = () => {
                         <textarea
                             placeholder="Write something to me :)"
                             value={mess.text}
+                            required
                             onChange={(e) => {
                                 usemess({
                                     email: mess.email,
@@ -50,7 +70,14 @@ const Contact = () => {
                                 });
                             }}
                         ></textarea>
-                        <button type="submit">Send</button>
+                        <button
+                            type="submit"
+                            onClick={(e) => {
+                                Send(e);
+                            }}
+                        >
+                            Send
+                        </button>
                     </form>
                 </div>
             </main>

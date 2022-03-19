@@ -12,9 +12,8 @@ const Projects = () => {
             <main className="MyProjects">
                 <Baner img={backProject} title="Projects" />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur possimus natus qui,
-                    beatae facere dolorem, unde quas doloribus quibusdam maxime nihil dolore consectetur?
-                    Quidem dolores, quisquam enim mollitia odit debitis!
+                    This is my humble gallery for my projects. I use various technologies to gain as much
+                    useful experience as possible and to learn as many Front-end tools as possible
                 </p>
                 {dataProjects.map((e: MyProjects) => (
                     <MyProject value={e} key={e.name} />
