@@ -1,20 +1,20 @@
-import react from "../../images/Icons/react.png";
-import mongodb from "../../images/Icons/mongodb.png";
-import js from "../../images/Icons/js.png";
+import react from "../images/Icons/react.png";
+import mongodb from "../images/Icons/mongodb.png";
+import js from "../images/Icons/js.png";
 import nodemailer from "../../images/Icons/nodemailer.png";
-import reactbootstrap from "../../images/Icons/reactbootstrap.svg";
-import gatsby from "../../images/Icons/gatsby.svg";
-import Dato from "../../images/Icons/Dato.png";
-import angular from "../../images/Icons/angular.png";
-import ts from "../../images/Icons/ts.png";
-import cy from "../../images/Icons/cy.png";
-import node from "../../images/Icons/node.png";
-import sass from "../../images/Icons/sass.png";
-import less from "../../images/Icons/less.svg";
-import backSA from "../../images/backgroundProjects/SA.jpg";
-import IQuiz from "../../images/backgroundProjects/IQuiz.jpg";
-import CRUD from "../../images/backgroundProjects/CRUD.png";
-import FF from "../../images/backgroundProjects/FF.png";
+import reactbootstrap from "../images/Icons/reactbootstrap.svg";
+import gatsby from "../images/Icons/gatsby.svg";
+import Dato from "../images/Icons/Dato.png";
+import angular from "../images/Icons/angular.png";
+import ts from "../images/Icons/ts.png";
+import cy from "../images/Icons/cy.png";
+import node from "../images/Icons/node.png";
+import sass from "../images/Icons/sass.png";
+import less from "../images/Icons/less.svg";
+import backSA from "../images/backgroundProjects/SA.jpg";
+import IQuiz from "../images/backgroundProjects/IQuiz.jpg";
+import CRUD from "../images/backgroundProjects/CRUD.png";
+import FF from "../images/backgroundProjects/FF.png";
 export const dataProjects = [
     {
         name: "Sound Architecture",
