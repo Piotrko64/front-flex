@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `FrontFlex`,
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://www.fronflex.netlify.app`,
     },
     plugins: [
         {

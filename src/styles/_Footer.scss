@@ -1,6 +1,6 @@
 .footer {
     padding-top: clamp(30px, 10vw, 60px);
-    background-color: black;
+    background-color: $grey;
     &__flex {
         @include flex(flex-start);
         flex-flow: row wrap;
@@ -9,10 +9,10 @@
             @include flex(flex-start);
             flex-direction: column;
             img {
-                height: 75px;
+                height: 65px;
             }
             a {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 text-decoration: none;
                 transition: all 0.3s ease;
                 &:hover {
@@ -29,7 +29,7 @@
         font-size: 0.8rem;
         padding: clamp(5px, 5vw, 20px);
         color: white;
-        background-color: black;
+        background-color: $grey;
         font-family: "Poppins";
         span {
             color: var(--favourite);

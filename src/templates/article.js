@@ -38,7 +38,7 @@ const Article = ({ pageContext: { slug }, data: { article } }) => {
                     <div className="article__describe">
                         <span>{article.data}</span>
 
-                        <StructuredText data={article.contentpl.value} />
+                        <StructuredText data={article.content.value} />
 
                         <div className="article__gallery">
                             <img src={article.gallery[0].url} />
