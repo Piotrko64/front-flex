@@ -23,7 +23,7 @@ function Nav() {
                     <Link to="/Contact">Contact</Link>
                 </li>
                 <li className="nav__icon">
-                    <a href="https://github.com/Piotrko64">
+                    <a href="https://github.com/Piotrko64" target="_blank" rel="noreferrer">
                         <AiFillGithub />
                     </a>
                 </li>
