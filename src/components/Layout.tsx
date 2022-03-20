@@ -8,7 +8,10 @@ const Layout = ({ children }) => {
         <>
             <Helmet>
                 <link rel="icon" type="image/png" href={miniLogo}></link>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no"
+                ></meta>
             </Helmet>
             <Nav />
             {children}
