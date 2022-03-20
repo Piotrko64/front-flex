@@ -19,7 +19,7 @@ export default function MainThird() {
             <h1>Skills</h1>
             <section className="Skills padding">
                 {arrayOfSkills.map((e) => (
-                    <img src={e} key={e} />
+                    <img src={e} key={e} alt={e} loading="lazy" />
                 ))}
             </section>
         </>
