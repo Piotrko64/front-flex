@@ -1,7 +1,8 @@
 import react from "../images/Icons/react.png";
 import mongodb from "../images/Icons/mongodb.png";
 import js from "../images/Icons/js.png";
-
+import html from "../images/Icons/html.png";
+import css from "../images/Icons/css.png";
 import reactbootstrap from "../images/Icons/reactbootstrap.svg";
 import gatsby from "../images/Icons/gatsby.svg";
 import Dato from "../images/Icons/Dato.png";
@@ -17,6 +18,7 @@ import IQuiz from "../images/backgroundProjects/IQuiz.jpg";
 import CRUD from "../images/backgroundProjects/CRUD.svg";
 import FF from "../images/backgroundProjects/FF.png";
 import mail from "../images/backgroundProjects/mail.svg";
+import P67 from "../images/backgroundProjects/67.svg";
 
 export const dataProjects = [
     {
@@ -63,5 +65,13 @@ export const dataProjects = [
         github: "https://github.com/Piotrko64/template-nodemailer.git",
 
         icons: [node, nodemailer],
+    },
+    {
+        name: "Piotrko67",
+        describe: `This is my FIRST (POLISH) portfolio website. If you see similarity to Front-Flex you have good eye to details! When I create FF I was inspired of Piotrko67. On this page was polish blog where I write about my experience. I ended up blogging while getting to know React better. I know. This page isn't perfect but I am proud anyway!`,
+        background: P67,
+        host: "http://piotrko67.ct8.pl",
+
+        icons: [html, css, js],
     },
 ];

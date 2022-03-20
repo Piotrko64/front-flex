@@ -46,7 +46,7 @@
         }
     }
     &__describe {
-        margin-top: 15vh;
+        margin-top: clamp(50px, 10vw, 100px);
 
         padding: 5px;
         @include maxmargin();
