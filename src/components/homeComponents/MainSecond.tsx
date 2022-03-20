@@ -6,12 +6,7 @@ function MainSecond() {
     return (
         <section className="About" style={{ backgroundImage: `url(${backCode})` }}>
             <div className="About__photo">
-                <StaticImage
-                    src="../../images/pjoter.webp"
-                    alt="I am Piotr"
-                    loading="lazy"
-                    title="Hello :D"
-                />
+                <img src={Me} alt="" title="Hello :D" />
             </div>
             <div className="About__describe padding">
                 <h1>About me</h1>
