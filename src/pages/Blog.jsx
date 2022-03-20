@@ -5,6 +5,7 @@ import "../styles/Blog.scss";
 import Baner from "../components/Baner";
 import "../styles/index.scss";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet";
 function Blog() {
     let data = useStaticQuery(graphql`
         {
@@ -35,6 +36,9 @@ function Blog() {
 
     return (
         <>
+            <Helmet>
+                <title>My Blog</title>
+            </Helmet>
             <Layout>
                 <div className="blog">
                     <Baner img={blogBack} title="Blog" />

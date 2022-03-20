@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import FooterFront from "../components/FooterFront";
+import { Helmet } from "react-helmet";
 import Layout from "../components/Layout";
 import MainFirst from "../components/homeComponents/MainFirst";
 import MainSecond from "../components/homeComponents/MainSecond";
@@ -23,6 +23,9 @@ function Main() {
     }, []);
     return (
         <>
+            <Helmet>
+                <title>Front-Flex</title>
+            </Helmet>
             <Layout>
                 <MainFirst />
                 <MainSecond />

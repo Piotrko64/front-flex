@@ -12,7 +12,7 @@ const MyProject = ({ value }: { value: MyProjects }) => {
             <div className="projectOne__describe padding">
                 <div className="projectOne__icons">
                     {value.icons.map((i) => (
-                        <img src={i} alt="" />
+                        <img src={i} alt="" loading="lazy" />
                     ))}
                 </div>
 
