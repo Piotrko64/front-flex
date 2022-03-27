@@ -52,7 +52,7 @@ export const dataProjects = [
     },
     {
         name: "Front Flex",
-        describe: `This was my first website with Angular. When I learned React on good level I thinking about knowing next framework. At the beginning I thought about VueJS. I heard that Vue is easy to learn but I wanted challenge! I chose Angular. Why? Because it is more hardly and I think that more employer want Angular Developer. IQuiz is app where you can do and made quiz! I still learn Angular. This is interesting new experience write website with React and Angular`,
+        describe: `This is the page you are viewing right now. I created this page to share my projects and start running blog.`,
         background: FF,
         github: "https://github.com/Piotrko64/react-sound-architecture",
 
@@ -63,7 +63,7 @@ export const dataProjects = [
         describe: `Template files to use Nodemailer. If you need create backend to sending email message this is something for you!`,
         background: mail,
         github: "https://github.com/Piotrko64/template-nodemailer.git",
-
+        host: "https://frontflex.netlify.app",
         icons: [node, nodemailer],
     },
     {

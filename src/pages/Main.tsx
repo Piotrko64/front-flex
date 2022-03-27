@@ -18,7 +18,7 @@ function Main() {
             "#579346",
             "#20678d",
         ];
-        const random = Math.round(Math.random() * colors.length);
+        const random = Math.floor(Math.random() * colors.length);
         document.documentElement.style.setProperty("--favourite", colors[random]);
     }, []);
     return (
