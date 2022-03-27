@@ -5,7 +5,11 @@
 
 I use:
 > React
+
 > Typescript
+
 > Gatsby
+
 > Sass
+
 > DatoCMS
