@@ -1,1 +1,3 @@
-#(Front-Flex My website/blog/portfolio)[https://frontflex.netlify.app]
+#[Front-Flex My website/blog/portfolio](https://frontflex.netlify.app)
+
+![Group 27](https://user-images.githubusercontent.com/77500425/160290300-f346777c-fd7c-4773-acdf-94f4f436ac32.png)
