@@ -1,7 +1,7 @@
 import * as React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { BsFillArrowUpRightSquareFill } from "react-icons/bs";
-import { MyProjects } from "../../../Others/Typing";
+import { MyProjects } from "../../../Others/types";
 const MyProject = ({ value }: { value: MyProjects }) => {
     console.log(value);
     return (
