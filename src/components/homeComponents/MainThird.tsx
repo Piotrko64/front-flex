@@ -11,7 +11,7 @@ import sass from "../../images/Icons/sass.png";
 import html from "../../images/Icons/html.png";
 import css from "../../images/Icons/css.png";
 import bootstrap from "../../images/Icons/bootstrap.png";
-// import bootstrap from "../images/Icons/bootstrap.png";
+
 export default function MainThird() {
     const arrayOfSkills = [ts, js, react, gatsby, html, css, sass, bootstrap, node, mongodb, git, angular];
     return (

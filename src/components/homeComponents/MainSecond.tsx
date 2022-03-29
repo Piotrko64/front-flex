@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import backCode from "../../images/backCode.png";
-import { StaticImage } from "gatsby-plugin-image";
 import Me from "../../images/pjoter.webp";
 function MainSecond() {
     return (

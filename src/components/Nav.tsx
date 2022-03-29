@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 
 // Icons
-import { AiFillGithub, AiFillSetting } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import miniLogo from "../images/minilogo.png";
 function Nav() {
     const [nav, useNav] = useState(false);
