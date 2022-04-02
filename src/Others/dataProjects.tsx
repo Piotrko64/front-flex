@@ -62,7 +62,6 @@ export const dataProjects = [
         name: "Template NodeMailer",
         describe: `Template files to use Nodemailer. If you need create backend to sending email message this is something for you!`,
         background: mail,
-        github: "https://github.com/Piotrko64/template-nodemailer.git",
         host: "https://frontflex.netlify.app",
         icons: [node, nodemailer],
     },
