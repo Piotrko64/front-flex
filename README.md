@@ -9,3 +9,8 @@ I use:
 > - Gatsby
 > - Sass
 > - DatoCMS
+
+Blog built thanks to DatoCMS with daily update by Zapier
+
+![image](https://user-images.githubusercontent.com/77500425/162631508-021deebc-19a2-476e-b3d5-64b8957cbbce.png)
+
