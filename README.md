@@ -9,6 +9,7 @@
 > - Gatsby
 > - Sass
 > - DatoCMS
+> - Zapier
 
 ## Blog built thanks to DatoCMS with daily update by Zapier
 
