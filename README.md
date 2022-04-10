@@ -3,7 +3,7 @@
 # <p align="center">My website/blog/portfolio</p>
 ![image](https://user-images.githubusercontent.com/77500425/160290479-73c6bd1b-673f-4d87-b019-d829202d2fa7.png)
 
-### I use:
+## I use:
 > - React
 > - Typescript
 > - Gatsby
@@ -15,3 +15,8 @@
 
 ![image](https://user-images.githubusercontent.com/77500425/162631508-021deebc-19a2-476e-b3d5-64b8957cbbce.png)
 
+## How start?
+
+> 1. You need git clone this repository
+> 2. Use **npm install**
+> 3. Use **npm start**
